@@ -1,0 +1,88 @@
+<!-- custom_popup_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:alignItems="center"
+        app:justifyContent="space_between">
+
+        <!-- Icono a la izquierda -->
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/baseline_brightness_3_24" />
+
+        <!-- Contenedor del texto y switch -->
+
+        <!-- Switch a la derecha -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Dark Mode"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/notifications"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Notifications"
+        android:textAlignment="center"
+        app:drawableLeftCompat="@drawable/baseline_notifications_none_24"
+        app:drawableStartCompat="@drawable/baseline_notifications_none_24" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Settings"
+        android:textAlignment="center"
+        app:drawableStartCompat="@drawable/baseline_settings_24" />
+</LinearLayout>
+

@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Widget.Theme.RecipesFood.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+    <style name="animate_avatar">
+        <item name="android:windowEnterAnimation">@anim/avatar_show</item>
+        <item name="android:windowExitAnimation">@anim/avatar_hide</item>
+    </style>
+
+</resources>

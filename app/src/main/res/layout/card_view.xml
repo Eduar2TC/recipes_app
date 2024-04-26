@@ -1,0 +1,185 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+
+                <ImageView
+                    android:id="@+id/image_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/zoolander1" />
+
+                <Button
+                    android:id="@+id/bookmark_button"
+                    android:translationX="0dp"
+                    android:translationY="5dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    app:icon="@drawable/bookmark"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="25dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical"
+                android:paddingStart="10sp"
+                android:paddingTop="20sp"
+                android:paddingRight="10sp"
+                android:paddingBottom="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.5"
+                        android:text="Atole"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/fav_btn0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/food_outline"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="TODO" />
+                        <ImageButton
+                            android:id="@+id/fav_btn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/food_outline"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="TODO" />
+                        <ImageButton
+                            android:id="@+id/fav_btn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/food_outline"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="TODO" />
+
+                        <ImageButton
+                            android:id="@+id/fav_btn3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/food_outline"
+                            android:tint="#a6a6a4" />
+
+                        <ImageButton
+                            android:id="@+id/fav_btn4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/food_outline"
+                            android:tint="#a6a6a4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    >
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/group_chips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                    >
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="maiz"
+                            android:textSize="10sp"
+                            app:chipMinHeight="20dp"
+                            app:chipMinTouchTargetSize="24dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="agua"
+                            android:textSize="10sp"
+                            app:chipMinHeight="20dp"
+                            app:chipMinTouchTargetSize="24dp" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/instructions_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500"
+                        android:textSize="12sp" />
+                </ScrollView>
+
+            </LinearLayout>
+
+            <!-- Agrega más elementos según sea necesario -->
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,31 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Nuevo ítem para el drawable en la parte superior -->
+    <item
+        android:width="20dp"
+        android:height="20dp"
+        android:gravity="top|end"
+        android:top="-24dp"
+        android:right="20dp"
+        >
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45"
+            android:pivotX="-40%"
+            android:pivotY="87%">
+            <shape android:shape="rectangle">
+                <stroke android:color="?colorOnBackground" android:width="0dp" />
+                <solid android:color="?colorPrimaryContainer" />
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Tu shape original -->
+    <item android:top="0dp">
+        <shape>
+            <solid android:color="@color/md_theme_light_primaryContainer" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+</layer-list>
